@@ -1,4 +1,4 @@
-<!------?php
+<?php
 define('BASE_URL', 'http://localhost/AI/');
 define('SITE_NAME', 'eMarket');
 define('CURRENCY', 'Ksh');
@@ -33,24 +33,4 @@ function sanitize($data) {
 
 function formatPrice($price) {
     return CURRENCY . number_format($price, 2);
-}
-
-
-<?php
-$host = getenv('DB_HOST');
-$db   = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$port = getenv('DB_PORT');
-
-try {
-    $pdo = new PDO(
-        "mysql:host=$host;port=$port;dbname=$db;charset=utf8",
-        $user,
-        $pass
-    );
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully!";
-} catch(PDOException $e) {
-    echo "Connection Error: " . $e->getMessage();
 }
