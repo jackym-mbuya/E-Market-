@@ -1,9 +1,9 @@
 FROM php:8.2-apache
 
-# Enable Apache rewrite module
+# Enable rewrite module
 RUN a2enmod rewrite
 
-# Allow .htaccess to override
+# Allow .htaccess overrides
 RUN echo "<Directory /var/www/html/> \
     AllowOverride All \
 </Directory>" >> /etc/apache2/apache2.conf
