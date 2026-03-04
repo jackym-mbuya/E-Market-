@@ -2,9 +2,9 @@
 require_once 'config.php';
 
 class Mpesa {
-    private $consumer_key = 'YOUR_CONSUMER_KEY';
-    private $consumer_secret = 'YOUR_CONSUMER_SECRET';
-    private $shortcode = 'YOUR_SHORTCODE';
+    private $consumer_key = 'oQgZPIF9WvssNI5NvPvNoKnzVRRe8Sn2hBZMDl2GGpqSbRBG';
+    private $consumer_secret = '7nMJqGkeDtcJZ8L7uYqPmcGlmubhMm5DkzZ89ylzEeOXEMMZcSYEPxR6yZ4EUxl4';
+    private $shortcode = 'N/A';
     private $passkey = 'YOUR_PASSKEY';
     private $callback_url = 'https://yourdomain.com/controllers/mpesa-callback.php';
     private $environment = 'sandbox'; // sandbox or live
