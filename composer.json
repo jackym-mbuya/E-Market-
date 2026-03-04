@@ -1,0 +1,13 @@
+{
+    "name": "emarket/ecommerce",
+    "description": "eMarket E-Commerce Platform",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

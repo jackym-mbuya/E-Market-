@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: emarket
+    env: php
+    buildCommand: |
+      # No build needed for PHP, but this ensures proper setup
+      echo "PHP app ready"
+    startCommand: |
+      # Use PHP built-in server
+      php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: BASE_URL
+        value: https://your-app-name.onrender.com/
+      - key: DB_HOST
+        value: # Will be provided by Render MySQL
+      - key: DB_NAME
+        value: # Will be provided by Render MySQL
+      - key: DB_USER
+        value: # Will be provided by Render MySQL
+      - key: DB_PASS
+        value: # Will be provided by Render MySQL
+        sync: false

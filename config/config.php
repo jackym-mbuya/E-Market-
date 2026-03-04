@@ -1,12 +1,12 @@
 <?php
-define('BASE_URL', 'http://localhost/AI/');
+define('BASE_URL', getenv('BASE_URL') ?: 'http://localhost/AI/');
 define('SITE_NAME', 'eMarket');
 define('CURRENCY', 'Ksh');
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'ecommerce_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'ecommerce_db');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 
 define('UPLOAD_PATH', __DIR__ . '/../uploads/');
 define('UPLOAD_URL', BASE_URL . 'uploads/');

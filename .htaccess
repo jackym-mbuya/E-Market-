@@ -3,8 +3,8 @@
 # Enable RewriteEngine
 RewriteEngine On
 
-# Base URL
-RewriteBase /AI/
+# Base URL - Update this for production
+RewriteBase /
 
 # Force HTTPS (uncomment if using HTTPS)
 # RewriteCond %{HTTPS} off
@@ -40,8 +40,8 @@ RewriteRule ^category/([0-9]+)/?$ views/product/shop.php?category=$1 [L,QSA]
 RewriteRule ^category/([a-z0-9-]+)/?$ views/product/shop.php?slug=$1 [L,QSA]
 
 # Error pages
-ErrorDocument 404 //views/error/404.phpAI
-ErrorDocument 500 /AI/views/error/500.php
+ErrorDocument 404 /views/error/404.php
+ErrorDocument 500 /views/error/500.php
 
 # Enable compression
 <IfModule mod_deflate.c>
